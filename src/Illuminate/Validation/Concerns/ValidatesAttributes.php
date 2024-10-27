@@ -489,6 +489,18 @@ trait ValidatesAttributes
     }
 
     /**
+     * Validate that an attribute is a value of only true/false.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @return bool
+     */
+    public function validateBooleanStrict($attribute, $value)
+    {
+        return is_bool($value);
+    }
+
+    /**
      * Validate that an attribute has a matching confirmation.
      *
      * @param  string  $attribute
